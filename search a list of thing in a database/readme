@@ -1,0 +1,4 @@
+When there is file A and B.
+A is a list of queries. B is the list of search targets.
+This program could use each line of A to search B. It will then make a line of list to show how many matched lines of A(line) found in B.
+It's part of a bigger program to analysis shopping carts file.
