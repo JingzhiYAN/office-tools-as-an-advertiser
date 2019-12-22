@@ -1,0 +1,3 @@
+This is the file one of shopping cart analysis program.
+Its function is to convert a shopify order export file into a list of carts for second program to use.
+The file needs two columns. Column one: Order number came from original file. Column two: variant SKU list from the original file.
