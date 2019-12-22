@@ -1,0 +1,20 @@
+import csv
+
+
+a = 0
+with open("J:/original data/orders all in one/items.csv") as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=',')
+    for row in csv_reader:
+        cartdata = open('J:/original data/orders all in one/database.txt', 'r')
+        for data in cartdata:
+            result = str.find(data, row[0]) != -1
+            if str.find(data, row[0]) != -1:
+                a = a+1
+        f = open('J:/original data/orders all in one/matrix.txt', 'a')
+        d = a/18560
+        f.write(str(a) + ',' + str(d) + ',')
+        f.write('\n')
+        a = 0
+        f.close()
+
+cartdata.close()

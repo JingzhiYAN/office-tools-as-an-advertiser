@@ -1,6 +1,4 @@
-import string
 import csv
-import codecs
 
 cartdata = open('cart2.txt', 'r')
 a = 0
