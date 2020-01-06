@@ -1,0 +1,7 @@
+My first index checker is dead. Because although the function finally work with selenium, it cannot pass the recaptcha of Google.
+
+So I made this second one. My thoughts is: since google disallow us to use robot to do it. There should be other ways allowed.
+
+So it turns back. I find the database of all backlinks collected by google's webmaster....
+
+Now same old same old. Compare two database to get the significan result. That's it XDXD.
