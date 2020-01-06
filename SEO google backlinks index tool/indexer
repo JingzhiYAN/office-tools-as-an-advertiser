@@ -3,20 +3,23 @@ import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-
+driver = webdriver.Chrome()
+driver.get('https://www.google.com')
 with open("E:/query.csv") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row in csv_reader:
-        driver = webdriver.Chrome()
-        driver.get('https://www.google.com')
+
         lin = row[0]
         lina = "site:" + lin
         elem = driver.find_element_by_name("q")
         elem.send_keys(lina)
-        time.sleep(2)
+        time.sleep(1)
         elem.send_keys(Keys.RETURN)
+        time.sleep(2)
 
-        if "not found" in driver.page_source:
+        if "did not match any documents" in driver.page_source:
             print ("Not indexed")
         else:
             print ("Indexed")
+        elem = driver.find_element_by_name("q").clear()
+        time.sleep(2)
