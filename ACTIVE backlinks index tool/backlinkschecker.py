@@ -1,5 +1,5 @@
 import csv
-a = 0
+a=0
 with open("E:\query.csv") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row in csv_reader:
@@ -7,6 +7,8 @@ with open("E:\query.csv") as csv_file:
         for data in linkdata:
             if str.find(data, row[0]) != -1:
                 a = a+1
+                f.close()
+                break
         if a != 0:
             f = open('E:/matrix.txt', 'a')
             f.write('true')
