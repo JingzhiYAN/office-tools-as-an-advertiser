@@ -1,11 +1,11 @@
 import csv
 
-cartdata = open('C:/Users/Andrew Yan/Desktop/data for calculation/orders.txt', 'r')
+orderdata = open('C:/Users/Andrew Yan/Desktop/data for calculation/orders.txt', 'r')
 a = 0
 with open("C:/Users/Andrew Yan/Desktop/data for calculation/influcners.csv") as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     for row in csv_reader:
-        for data in cartdata:
+        for data in orderdata:
             result = str.find(data, row[0]) != -1
             if str.find(data, row[0]) != -1:
                 a = a+1
