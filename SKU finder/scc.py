@@ -7,8 +7,10 @@ with open("shuzhe2.csv") as csv_file:
         cartdata = open('cart2.txt', 'r')
         for data in cartdata:
             result = str.find(data, row[0]) != -1
-            data = data.strip()
-            if str.find(data, row[0]) != -1:
+            data = data.strip('\n')
+            data = repr(data)
+            bac = repr(row[0])
+            if str.find(data, bac) != -1:
                 a = a+1
                 break
         if a == 0:
